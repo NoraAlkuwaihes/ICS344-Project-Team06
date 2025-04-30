@@ -20,7 +20,7 @@ service ssh status
 nano users.txt
 nano pass.txt
 ```
-Sample Content:
+Files Content:
 - users.txt: Shahad, Norah, vagrant, Jude, Jouri, Abood, Hamood, Noor, Rawan, Ali, Ooody
 - pass.txt: Shahad, Norah, vagrant, Jude, Jouri, Abood, Hamood, Noor, Rawan, Ali, Ooody
 
