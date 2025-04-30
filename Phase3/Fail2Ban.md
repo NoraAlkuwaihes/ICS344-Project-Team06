@@ -8,6 +8,22 @@
 
 ---
 
+## Before Defense – Vulnerable SSH
+
+Before applying Fail2Ban, the SSH service was vulnerable to brute-force attacks. As shown below, a valid login was successfully obtained using Metasploit:
+
+![Before Defense - Successful brute-force](./screenshots/00_before_defense.png)
+---
+
+## Defense Implementation Overview
+
+Now we will implement a security defense mechanism on the target system to prevent SSH brute-force attacks. We chose **Fail2Ban** because it is lightweight, easy to configure, and effective in automatically detecting and banning malicious IPs based on repeated failed login attempts.
+
+This solution works by monitoring authentication logs (e.g., `/var/log/auth.log`) and applying firewall rules to block IP addresses that exceed a defined number of login failures. It helps reduce the attack surface by limiting repeated unauthorized access attempts, which was clearly observed in the previous attack phase.
+
+In the steps below, we configure and test Fail2Ban to protect the SSH service and demonstrate its impact before and after deployment.
+
+---
 ## Step 1: Install Fail2Ban
 ```bash
 sudo apt install fail2ban
