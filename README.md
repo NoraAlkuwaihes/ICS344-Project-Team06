@@ -2,7 +2,7 @@
 
 
 - **Group Number**: 06
-- **Section Number: F07
+- **Section Number**: F07
 
 
 ### Team Members and work Distribution Table
