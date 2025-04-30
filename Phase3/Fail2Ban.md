@@ -32,7 +32,7 @@ sudo apt install fail2ban
 
 ---
 
-## 🛠 Step 2: Copy & Edit Jail Configuration
+## Step 2: Copy & Edit Jail Configuration
 ```bash
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 sudo nano /etc/fail2ban/jail.local
