@@ -24,7 +24,11 @@ Files Content:
 - users.txt: Shahad, Norah, vagrant, Jude, Jouri, Abood, Hamood, Noor, Rawan, Ali, Ooody
 - pass.txt: Shahad, Norah, vagrant, Jude, Jouri, Abood, Hamood, Noor, Rawan, Ali, Ooody
 
-![User/Pass file created](./screenshots/02_user_pass_created.png)
+
+<img src="./screenshots/02_user_pass_created.png" alt="User/Pass file created" width="600">
+
+
+
 
 ### 3. Launched Metasploit Framework
 ```bash
