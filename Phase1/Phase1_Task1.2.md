@@ -24,7 +24,7 @@ The script executed successfully. Hydra found the correct SSH login credentials:
 chmod +x ssh_bruteforce.sh
 ./ssh_bruteforce.sh
 ```
-![Hydra attack result](./screenshots/09_hydra_attack_output.png)
+<img src="./screenshots/09_hydra_attack_output.png" alt="User/Pass file created" width="600"/>
 
 ### Result:
 Hydra successfully identified:
