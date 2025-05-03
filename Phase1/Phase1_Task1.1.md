@@ -40,7 +40,7 @@ search ssh
 
 ### 5. Selected ssh_login module
 ```bash
-use auxiliary/scanner/ssh/ssh_login
+use 0 auxiliary/scanner/ssh/ssh_login
 show options
 ```
 ![ssh_login config](./screenshots/05_ssh_login_config.png)
