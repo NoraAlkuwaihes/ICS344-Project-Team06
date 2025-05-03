@@ -12,7 +12,7 @@
 
 Before applying Fail2Ban, the SSH service was vulnerable to brute-force attacks. As shown below, a valid login was successfully obtained using Metasploit:
 
-![Before Defense - Successful brute-force](./screenshots/00_before_defense.png.png)
+![Before Defense - Successful brute-force](./screenshots/00_before_defense.png)
 ---
 
 ## Defense Implementation Overview
