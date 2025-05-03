@@ -39,15 +39,17 @@ sudo nano /etc/fail2ban/jail.local
 ```
 ![Copy and edit config](./screenshots/02_edit_jail_local.png)
 
-Modified section:
+Modified this section:
 ```
 [sshd]
 enabled=true
-port=ssh
+port=sshd
 filter=sshd
 logpath=/var/log/auth.log
 maxretry=3
-bantime=600
+bantime=2500
+action: iptables[name SSH, port=ssh, protocol= tcp]
+findtime=700
 ```
 ![Modified jail.local](./screenshots/03_modified_jail_local.png)
 
@@ -61,7 +63,7 @@ sudo service fail2ban restart
 
 ---
 
-## Step 4: Verify Fail2Ban is Active
+## Step 4: Verify Fail2Ban is Active before the attack
 ```bash
 sudo fail2ban-client status sshd
 ```
@@ -71,15 +73,34 @@ This confirms monitoring on `/var/log/auth.log` is active.
 ---
 
 ## Step 5: Test the Defense
-From attacker machine:
+From attacker machine re run the same atack from phase 1:
 ```bash
-ssh vagrant@192.168.56.103
+./ssh_bruteforce.sh
 ```
-- Entered wrong password 3 times
-- Connection was forcefully closed
-![Connection closed after 3 attempts](./screenshots/06_brute_force_blocked.png)
+The screenshot demonstrate that the attacker was not able to brute-force into the system.
+Even after multiple failed attempts, access was denied — indicating defensive blocking or no valid credentials.
+
+![Connection closed after 3 attempts](./screenshots/06_re-run_attack.png)
 
 ---
+
+## Check the fail2ban status after the attack
+```bash
+sudo fail2ban-client status sshd
+```
+
+![Attacker IP blocked](./screenshots/07_attacker_blocked.png)
+
+Fail2Ban is successfully:
+
+- Monitoring SSH login failures.
+- Detecting multiple failed attempts.
+- Banning the attacker's IP (192.168.56.101) based on the defined policy.
+
+This proves that the defense mechanism is working as intended.
+
+
+
 
 ## Outcome
 - Fail2Ban successfully detected and blocked brute-force login attempts on SSH.
